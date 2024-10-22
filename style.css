@@ -1,0 +1,96 @@
+[data-theme="winter"] .dark-logo {
+  display: none;
+}
+
+[data-theme="winter"] .light-logo {
+  display: block;
+}
+
+[data-theme="dark"] .light-logo {
+  display: none;
+}
+
+[data-theme="dark"] .dark-logo {
+  display: block;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+}
+
+.process-step {
+  position: relative;
+}
+
+.process-step::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #3b82f6;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%);
+}
+
+.process-step:last-child::after {
+  display: none;
+}
+
+.swap-rotate {
+  position: relative;
+  overflow: visible;
+}
+
+.swap-rotate .toggle {
+  z-index: 1;
+}
+
+.swap-on,
+.swap-off {
+  z-index: 2;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
