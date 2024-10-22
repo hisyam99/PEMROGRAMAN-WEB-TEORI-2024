@@ -1,49 +1,32 @@
 AOS.init();
 
-function validateForm() {
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let service = document.getElementById("service").value.trim();
-    let message = document.getElementById("message").value.trim();
-  
-    if (
-      name === "" ||
-      email === "" ||
-      phone === "" ||
-      service === "" ||
-      message === ""
-    ) {
-      window.alert("Semua data harus diisi.");
-    } else {
-      window.alert("Form terkirim!");
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contact-form");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !phone || !service || !message) {
+      alert("Mohon lengkapi semua field sebelum mengirim pesan.");
+      return;
     }
-  }
 
-// const mobileMenu = document.querySelector(".mobile-menu");
-// const openMenuBtn = document.getElementById("openMenu");
-// const closeMenuBtn = document.getElementById("closeMenu");
+    console.log({
+      nama: name,
+      email: email,
+      telepon: phone,
+      layanan: service,
+      pesan: message,
+    });
 
-// openMenuBtn.addEventListener("click", () => {
-//   mobileMenu.classList.remove("-translate-x-full");
-// });
+    alert("Pesan Anda berhasil dikirim!");
 
-// closeMenuBtn.addEventListener("click", () => {
-//   mobileMenu.classList.add("-translate-x-full");
-// });
-
-// const mobileMenuItems = mobileMenu.querySelectorAll("a");
-// mobileMenuItems.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     mobileMenu.classList.add("-translate-x-full");
-//   });
-// });
-
-// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//   anchor.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     document.querySelector(this.getAttribute("href")).scrollIntoView({
-//       behavior: "smooth",
-//     });
-//   });
-// });
+    contactForm.reset();
+  });
+});

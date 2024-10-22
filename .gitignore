@@ -6,6 +6,7 @@
 .env.local
 target
 lib
+link_preview_web.txt
 
 # Fresh build directory
 _fresh/

@@ -802,6 +802,7 @@
                   <div class="form-control w-full">
                     <input
                       type="text"
+                      id="name"
                       placeholder="Nama Lengkap"
                       class="input input-bordered w-full text-sm md:text-base focus:input-primary"
                     />
@@ -809,22 +810,23 @@
                   <div class="form-control w-full">
                     <input
                       type="email"
+                      id="email"
                       placeholder="Email"
                       class="input input-bordered w-full text-sm md:text-base focus:input-primary"
                     />
                   </div>
                 </div>
-
                 <div class="form-control w-full">
                   <input
                     type="tel"
+                    id="phone"
                     placeholder="Nomor Telepon"
                     class="input input-bordered w-full text-sm md:text-base focus:input-primary"
                   />
                 </div>
-
                 <div class="form-control w-full">
                   <select
+                    id="service"
                     class="select select-bordered w-full text-sm md:text-base focus:select-primary"
                   >
                     <option disabled selected>Pilih Layanan</option>
@@ -834,20 +836,21 @@
                     <option>Service Aksesoris</option>
                   </select>
                 </div>
-
                 <div class="form-control w-full">
                   <textarea
+                    id="message"
                     class="textarea textarea-bordered h-24 md:h-32 text-sm md:text-base focus:textarea-primary"
                     placeholder="Tulis pesan Anda"
                   ></textarea>
                 </div>
-
                 <div class="relative overflow-hidden">
-                  <button class="btn btn-primary w-full text-sm md:text-base">
-                    <span class="inline-flex items-center gap-2">
-                      Kirim Pesan
-                      <i class="fas fa-paper-plane"></i>
-                    </span>
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-full text-sm md:text-base"
+                  >
+                    <span class="inline-flex items-center gap-2"
+                      >Kirim Pesan<i class="fas fa-paper-plane"></i
+                    ></span>
                   </button>
                 </div>
               </form>
@@ -861,7 +864,7 @@
       <div
         class="footer p-6 md:p-10 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
       >
-        <div class="space-y-4" data-aos="fade-up">
+        <div class="space-y-4">
           <img
             src="/public/reparin-icon.png"
             alt="Reparin"
@@ -895,7 +898,7 @@
           </div>
         </div>
 
-        <nav class="space-y-2" data-aos="fade-up" data-aos-delay="100">
+        <nav class="space-y-2">
           <h6 class="footer-title">Layanan</h6>
           <a
             class="link link-hover hover:text-primary transition-colors duration-300 flex items-center gap-2"
@@ -919,7 +922,7 @@
           </a>
         </nav>
 
-        <nav class="space-y-2" data-aos="fade-up" data-aos-delay="200">
+        <nav class="space-y-2">
           <h6 class="footer-title">Perusahaan</h6>
           <a
             class="link link-hover hover:text-primary transition-colors duration-300 flex items-center gap-2"
@@ -943,7 +946,7 @@
           </a>
         </nav>
 
-        <nav class="space-y-2" data-aos="fade-up" data-aos-delay="300">
+        <nav class="space-y-2">
           <h6 class="footer-title">Support</h6>
           <a
             class="link link-hover hover:text-primary transition-colors duration-300 flex items-center gap-2"
